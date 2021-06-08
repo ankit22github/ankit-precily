@@ -1,1 +1,18 @@
-
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+        name: myreplicaset
+spec:
+        replicas: 3
+        selector:
+                matchLabels:
+                        env: prod
+        template:
+                metadata:
+                        labels:
+                                app: tess
+                                env: prod
+                spec:
+                        containers:
+                                - name: mycont
+                                  image: ankitdocker22/ankitprecily:v1
