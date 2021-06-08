@@ -7,3 +7,5 @@ application with APIs which extracts text from images.
 opencv-python==4.4.0.46
 
 pytesseract==0.3.7
+
+flask
